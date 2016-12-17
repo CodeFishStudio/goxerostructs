@@ -30,9 +30,10 @@ type PayTemplate struct {
 
 //EarningsLine is an earning line from xero
 type EarningsLine struct {
-	EarningsRateID  string  `json:"EarningsRateID"`
-	CalculationType string  `json:"CalculationType"`
-	AnnualSalary    float64 `json:"AnnualSalary"`
-	RatePerUnit     float64 `json:"RatePerUnit"`
-	NumberOfUnits   float64 `json:"NormalNumberOfUnits"`
+	EarningsRateID       string  `json:"EarningsRateID"`
+	CalculationType      string  `json:"CalculationType"`
+	AnnualSalary         float64 `json:"AnnualSalary"`
+	RatePerUnit          float64 `json:"RatePerUnit"`
+	NumberOfUnits        float64 `json:"NormalNumberOfUnits"`
+	NumberOfUnitsPerWeek float64 `json:"NumberOfUnitsPerWeek"`
 }
