@@ -26,6 +26,7 @@ type Employee struct {
 //PayTemplate is an pay template from xero
 type PayTemplate struct {
 	EarningsLines []EarningsLine `json:"EarningsLines"`
+	LeaveLines    []LeaveLine    `json:"LeaveLines"`
 }
 
 //EarningsLine is an earning line from xero
@@ -36,4 +37,13 @@ type EarningsLine struct {
 	RatePerUnit          float64 `json:"RatePerUnit"`
 	NumberOfUnits        float64 `json:"NormalNumberOfUnits"`
 	NumberOfUnitsPerWeek float64 `json:"NumberOfUnitsPerWeek"`
+}
+
+//LeaveLine is a leave line from xero
+type LeaveLine struct {
+	LeaveTypeID                    string  `json:"LeaveTypeID"`
+	CalculationType                string  `json:"CalculationType"`
+	AnnualNumberOfUnits            float64 `json:"AnnualNumberOfUnits"`
+	FullTimeNumberOfUnitsPerPeriod float64 `json:"FullTimeNumberOfUnitsPerPeriod"`
+	EntitlementFinalPayPayoutType  string  `json:"EntitlementFinalPayPayoutType"`
 }

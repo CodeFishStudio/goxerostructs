@@ -30,5 +30,6 @@ type EarningsRate struct {
 
 //LeaveType is an earning rate from xero
 type LeaveType struct {
-	Name string `json:"Name"`
+	Name              string  `json:"Name"`
+	NormalEntitlement float64 `json:"NormalEntitlement"`
 }
