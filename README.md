@@ -1,5 +1,4 @@
-goxerostructs
-======
+# goxerostructs
 
 Golang structs for working with the Xero api
 
