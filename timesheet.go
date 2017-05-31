@@ -25,9 +25,10 @@ type TimesheetLines struct {
 
 //TimesheetLine is an timesheet within xero for payroll
 type TimesheetLine struct {
-	EarningsRateID string        `json:"EarningsRateID"`
-	TrackingItemID string        `json:"TrackingItemID" xml:"TrackingItemID,omitempty"`
-	NumberOfUnits  NumberOfUnits `xml:"NumberOfUnits"`
+	EarningsRateID   string        `json:"EarningsRateID"`
+	TrackingItemID   string        `json:"TrackingItemID" xml:"TrackingItemID,omitempty"`
+	NumberOfUnits    NumberOfUnits `xml:"NumberOfUnits"`
+	EarningsRateName string        `json:"EarningsRateName" xml:"-"`
 }
 
 //NumberOfUnits is an timesheet within xero for payroll
