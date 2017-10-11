@@ -35,9 +35,3 @@ type LineItem struct {
 	Quantity    float64 `json:"Quantity"`
 	LineAmount  float64 `json:"LineAmount"`
 }
-
-//Contact is a contact for a bank transaction
-type Contact struct {
-	ContactID string `json:"ContactID"`
-	Name      string `json:"Name"`
-}
