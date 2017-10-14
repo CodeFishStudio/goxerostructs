@@ -5,14 +5,23 @@ type TrackingResult struct {
 	ID           string     `json:"ID"`
 	ProviderName string     `json:"ProviderName"`
 	Status       string     `json:"Status"`
-	Trackings    []Tracking `json:"Trackings"`
+	Trackings    []Tracking `json:"TrackingCategories"`
 }
 
 //Tracking is an Tracking from xero
 type Tracking struct {
 	Name               string `json:"Name"`
-	Option             string `json:"Option"`
 	TrackingCategoryID string `json:"TrackingCategoryID"`
+	Options []TrackingOption `json:"Options"`
+}
+
+
+//TrackingOption is an Tracking from xero
+type TrackingOption struct {
+	TrackingOptionID               string `json:"TrackingOptionID"`
+	Name             string `json:"Name"`
+	Status string `json:"Status"`
+	IsActive bool `json:"IsActive"`
 }
 
 /*
