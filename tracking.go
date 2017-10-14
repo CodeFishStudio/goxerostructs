@@ -1,5 +1,13 @@
 package goxerostructs
 
+//TrackingResult is an Tracking result from xero
+type TrackingResult struct {
+	ID           string     `json:"ID"`
+	ProviderName string     `json:"ProviderName"`
+	Status       string     `json:"Status"`
+	Trackings    []Tracking `json:"Trackings"`
+}
+
 //Tracking is an Tracking from xero
 type Tracking struct {
 	Name               string `json:"Name"`
