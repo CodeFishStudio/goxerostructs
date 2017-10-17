@@ -20,4 +20,5 @@ type Purchase struct {
 	TotalTax        float64    `json:"TotalTax"`
 	Total           float64    `json:"Total"`
 	Tracking        []Tracking `json:"Tracking"`
+	LineItems       []LineItem `json:"LineItems"`
 }
