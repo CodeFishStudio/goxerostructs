@@ -1,10 +1,13 @@
 package goxerostructs
 
+import "time"
+
 //EmployeeResult is an employee result from xero
 type EmployeeResult struct {
 	ID           string     `json:"ID"`
 	ProviderName string     `json:"ProviderName"`
 	Status       string     `json:"Status"`
+	DateCreated  time.Time  `json:"DateCreated"`
 	Employees    []Employee `json:"Employees"`
 }
 

@@ -1,11 +1,14 @@
 package goxerostructs
 
+import "time"
+
 //PayItemResult is an pay item result from xero
 type PayItemResult struct {
-	ID           string  `json:"ID"`
-	ProviderName string  `json:"ProviderName"`
-	Status       string  `json:"Status"`
-	PayItems     PayItem `json:"PayItems"`
+	ID           string    `json:"ID"`
+	ProviderName string    `json:"ProviderName"`
+	Status       string    `json:"Status"`
+	PayItems     PayItem   `json:"PayItems"`
+	DateCreated  time.Time `json:"DateCreated"`
 }
 
 //PayItem is an employee from xero
