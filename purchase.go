@@ -1,10 +1,13 @@
 package goxerostructs
 
+import "time"
+
 //PurchaseResult is an Purchase result from xero
 type PurchaseResult struct {
 	ID             string     `json:"ID"`
 	ProviderName   string     `json:"ProviderName"`
 	Status         string     `json:"Status"`
+	DateCreated    time.Time  `json:"DateCreated"`
 	PurchaseOrders []Purchase `json:"PurchaseOrders"`
 }
 
