@@ -9,6 +9,7 @@ type PurchaseResult struct {
 	Status         string     `json:"Status"`
 	DateCreated    time.Time  `json:"DateCreated"`
 	PurchaseOrders []Purchase `json:"PurchaseOrders"`
+	Params         string     `json:"Params"`
 }
 
 //Purchase is an Purchase from xero

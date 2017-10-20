@@ -8,6 +8,7 @@ type InvoiceResult struct {
 	ProviderName string    `json:"ProviderName"`
 	Status       string    `json:"Status"`
 	DateCreated  time.Time `json:"DateCreated"`
+	Params       string    `json:"Params"`
 	Invoices     []Invoice `json:"Invoices"`
 }
 
