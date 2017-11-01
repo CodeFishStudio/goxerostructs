@@ -4,26 +4,27 @@ import "time"
 
 //InvoiceResult is an Invoice result from xero
 type InvoiceResult struct {
-	ID           string    `json:"ID"`
-	ProviderName string    `json:"ProviderName"`
-	Status       string    `json:"Status"`
-	DateCreated  time.Time `json:"DateCreated"`
-	Params       string    `json:"Params"`
-	Invoices     []Invoice `json:"Invoices"`
+	ID           string    `json:"ID,omitempty"`
+	ProviderName string    `json:"ProviderName,omitempty"`
+	Status       string    `json:"Status,omitempty"`
+	DateCreated  time.Time `json:"DateCreated,omitempty"`
+	Params       string    `json:"Params,omitempty"`
+	Invoices     []Invoice `json:"Invoices,omitempty"`
 }
 
 //Invoice is an Invoice from xero
 type Invoice struct {
-	Type            string     `json:"Type"`
-	Contact         Contact    `json:"Contact"`
-	Date            string     `json:"DateString"`
-	DueDate         string     `json:"DueDate"`
-	Status          string     `json:"Status"`
-	InvoiceNumber   string     `json:"InvoiceNumber"`
-	LineAmountTypes string     `json:"LineAmountTypes"`
-	InvoiceID       string     `json:"InvoiceID"`
-	TotalTax        float64    `json:"TotalTax"`
-	Total           float64    `json:"Total"`
-	Tracking        []Tracking `json:"Tracking"`
-	LineItems       []LineItem `json:"LineItems"`
+	Type            string     `json:"Type,omitempty" xml:"Type,omitempty"`
+	Contact         Contact    `json:"Contact,omitempty" xml:"Contact,omitempty"`
+	Date            string     `json:"Date,omitempty" xml:"Date,omitempty"`
+	DateString      string     `json:"DateString,omitempty" xml:"DateString,omitempty"`
+	DueDate         string     `json:"DueDate,omitempty" xml:"DueDate,omitempty"`
+	Status          string     `json:"Status,omitempty" xml:"Status,omitempty"`
+	InvoiceNumber   string     `json:"InvoiceNumber,omitempty" xml:"InvoiceNumber,omitempty"`
+	LineAmountTypes string     `json:"LineAmountTypes,omitempty" xml:"LineAmountTypes,omitempty"`
+	InvoiceID       string     `json:"InvoiceID,omitempty" xml:"InvoiceID,omitempty"`
+	TotalTax        float64    `json:"TotalTax,omitempty" xml:"TotalTax,omitempty"`
+	Total           float64    `json:"Total,omitempty" xml:"Total,omitempty"`
+	Tracking        []Tracking `json:"Tracking,omitempty" xml:"Tracking,omitempty"`
+	LineItems       []LineItem `json:"LineItems,omitempty" xml:"LineItems,omitempty"`
 }

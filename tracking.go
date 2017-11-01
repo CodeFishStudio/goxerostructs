@@ -10,18 +10,18 @@ type TrackingResult struct {
 
 //Tracking is an Tracking from xero
 type Tracking struct {
-	Name               string           `json:"Name"`
-	TrackingCategoryID string           `json:"TrackingCategoryID"`
-	Options            []TrackingOption `json:"Options"`
-	Option             string           `json:"Option"`
+	Name               string           `json:"Name,omitempty" xml:"Name,omitempty"`
+	TrackingCategoryID string           `json:"TrackingCategoryID,omitempty" xml:"TrackingCategoryID,omitempty"`
+	Options            []TrackingOption `json:"Options,omitempty" xml:"Options,omitempty"`
+	Option             string           `json:"Option,omitempty" xml:"Option,omitempty"`
 }
 
 //TrackingOption is an Tracking from xero
 type TrackingOption struct {
-	TrackingOptionID string `json:"TrackingOptionID"`
-	Name             string `json:"Name"`
-	Status           string `json:"Status"`
-	IsActive         bool   `json:"IsActive"`
+	TrackingOptionID string `json:"TrackingOptionID,omitempty" xml:"TrackingOptionID,omitempty"`
+	Name             string `json:"Name,omitempty" xml:"Name,omitempty"`
+	Status           string `json:"Status,omitempty" xml:"Status,omitempty"`
+	IsActive         bool   `json:"IsActive,omitempty" xml:"IsActive,omitempty"`
 }
 
 /*

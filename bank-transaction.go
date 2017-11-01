@@ -28,11 +28,12 @@ type BankTransaction struct {
 
 //LineItem is a line item of a bank transaction
 type LineItem struct {
-	Description string     `json:"Description"`
-	AccountCode string     `json:"AccountCode"`
-	TaxAmount   float64    `json:"TaxAmount"`
-	UnitAmount  float64    `json:"UnitAmount"`
-	Quantity    float64    `json:"Quantity"`
-	LineAmount  float64    `json:"LineAmount"`
-	Tracking    []Tracking `json:"Tracking"`
+	Description string     `json:"Description,omitempty" xml:"Description,omitempty"`
+	AccountCode string     `json:"AccountCode,omitempty" xml:"AccountCode,omitempty"`
+	TaxType     string     `json:"TaxType,omitempty" xml:"TaxType,omitempty"`
+	TaxAmount   float64    `json:"TaxAmount,omitempty" xml:"TaxAmount,omitempty"`
+	UnitAmount  float64    `json:"UnitAmount,omitempty" xml:"UnitAmount,omitempty"`
+	Quantity    float64    `json:"Quantity,omitempty" xml:"Quantity,omitempty"`
+	LineAmount  float64    `json:"LineAmount,omitempty" xml:"LineAmount,omitempty"`
+	Tracking    []Tracking `json:"Tracking,omitempty" xml:"Tracking,omitempty"`
 }
