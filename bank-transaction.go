@@ -1,11 +1,15 @@
 package goxerostructs
 
+import "time"
+
 //BankTransactionResult  a bank transaction from xero
 type BankTransactionResult struct {
 	ID               string            `json:"ID"`
 	ProviderName     string            `json:"ProviderName"`
 	Status           string            `json:"Status"`
 	BankTransactions []BankTransaction `json:"BankTransactions"`
+	DateCreated      time.Time         `json:"DateCreated,omitempty"`
+	Params           string            `json:"Params,omitempty"`
 }
 
 //BankTransaction  a bank transaction from xero
@@ -35,5 +39,6 @@ type LineItem struct {
 	UnitAmount  float64    `json:"UnitAmount,omitempty" xml:"UnitAmount,omitempty"`
 	Quantity    float64    `json:"Quantity,omitempty" xml:"Quantity,omitempty"`
 	LineAmount  float64    `json:"LineAmount,omitempty" xml:"LineAmount,omitempty"`
+	LineItemID  string     `json:"LineItemID,omitempty" xml:"LineItemID,omitempty"`
 	Tracking    []Tracking `json:"Tracking,omitempty" xml:"Tracking,omitempty"`
 }
