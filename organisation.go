@@ -7,7 +7,7 @@ type OrganisationResult struct {
 	ID            string         `json:"ID"`
 	ProviderName  string         `json:"ProviderName"`
 	Status        string         `json:"Status"`
-	Organisations []Organisation `json:"Contacts"`
+	Organisations []Organisation `json:"Organisations"`
 	DateCreated   time.Time      `json:"DateCreated"`
 }
 
