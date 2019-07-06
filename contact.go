@@ -14,6 +14,6 @@ type Contact struct {
 	Name       string `json:"Name,omitempty" xml:"Name,omitempty"`
 	FirstName  string `json:"FirstName,omitempty" xml:"FirstName,omitempty"`
 	LastName   string `json:"LastName,omitempty" xml:"LastName,omitempty"`
-	Email      string `json:"Email,omitempty" xml:"Email,omitempty"`
+	Email      string `json:"EmailAddress,omitempty" xml:"EmailAddress,omitempty"`
 	IsSupplier bool   `json:"IsSupplier,omitempty" xml:"IsSupplier,omitempty"`
 }
