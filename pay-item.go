@@ -29,10 +29,12 @@ type EarningsRate struct {
 	Multiplier        float64 `json:"Multiplier"`
 	AccrueLeave       bool    `json:"AccrueLeave"`
 	Amount            float64 `json:"Amount"`
+	CurrentRecord     bool    `json:"CurrentRecord"`
 }
 
 //LeaveType is an earning rate from xero
 type LeaveType struct {
 	Name              string  `json:"Name"`
 	NormalEntitlement float64 `json:"NormalEntitlement"`
+	CurrentRecord     bool    `json:"CurrentRecord"`
 }
